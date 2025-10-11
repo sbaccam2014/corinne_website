@@ -276,14 +276,14 @@ export default function CorinneTherapySite() {
               <div className="mt-6 grid sm:grid-cols-2 gap-4">
                 <div className="rounded-2xl bg-neutral-50 p-5 ring-1 ring-black/5">
                   <div className="font-medium">Phone</div>
-                  <a href="tel:+15551234567" className="text-emerald-700 hover:underline">
-                    (555) 123-4567
+                  <a href="tel:+15088685555" className="text-emerald-700 hover:underline">
+                    (508) 868-5555
                   </a>
                 </div>
                 <div className="rounded-2xl bg-neutral-50 p-5 ring-1 ring-black/5">
                   <div className="font-medium">Email</div>
-                  <a href="mailto:hello@corinnespangler.com" className="text-emerald-700 hover:underline">
-                    hello@corinnespangler.com
+                  <a href="mailto:corinnees@yahoo.com" className="text-emerald-700 hover:underline">
+                    corinnees@yahoo.com
                   </a>
                 </div>
               </div>

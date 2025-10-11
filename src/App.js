@@ -294,23 +294,6 @@ export default function CorinneTherapySite() {
                   </a>
                 </div>
 
-                {/* Address card */}
-                <div className="rounded-2xl bg-neutral-50 p-5 ring-1 ring-black/5 sm:col-span-2">
-                  <div className="font-medium">Address</div>
-                  <div className="mt-1">
-                    <address className="not-italic text-neutral-800">
-                      14 Church Street, Hopkinton, MA 01748
-                    </address>
-                    <a
-                      href="https://maps.google.com/?q=14%20Church%20Street%2C%20Hopkinton%2C%20MA%2001748"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-block mt-2 text-emerald-700 hover:underline"
-                    >
-                      Open in Google Maps
-                    </a>
-                  </div>
-                </div>
               </div>
             </FadeIn>
           </div>

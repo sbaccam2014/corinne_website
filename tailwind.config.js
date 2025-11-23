@@ -4,6 +4,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["'Raleway'", "sans-serif"],
+        nunito: ["'Nunito'", "sans-serif"],
       },
     },
   },

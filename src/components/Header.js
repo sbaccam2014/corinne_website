@@ -31,16 +31,14 @@ const Header = ({ active, onNav }) => {
         <Link to="/" className="flex items-center gap-3" aria-label="Live Life Better Therapy - Home">
           <img
             src="/images/logo.png"
-            alt="Live Life Better Therapy logo"
-            className="h-24 w-24 md:h-28 md:w-28 rounded-full object-cover ring-2 ring-slate-200"
+            alt="Live Life Better Therapy hummingbird logo"
+            className="h-20 w-20 md:h-24 md:w-24 object-contain"
           />
-          <div className="leading-tight">
-            <div className="font-nunito text-xl text-slate-900">
-              Corinne Spangler-Baccam
-            </div>
-            <div className="text-xs text-slate-500">MA, LMHC, CEIS</div>
-            <div className="text-xs font-medium mt-0.5" style={{color: '#9CAF88'}}>Live Life Better Therapy</div>
-          </div>
+          <img
+            src="/images/text_logo.png"
+            alt="Live Life Better Therapy - Corinne Spangler-Baccam, MA, LMHC, CEIS"
+            className="h-16 md:h-20 w-auto object-contain"
+          />
         </Link>
 
         {/* Desktop nav */}

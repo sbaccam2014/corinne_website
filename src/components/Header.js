@@ -25,7 +25,7 @@ const Header = ({ active, onNav }) => {
   };
 
   return (
-    <header className="border-b border-gray-100 relative" role="banner">
+    <header className="border-b border-gray-100 sticky top-0 bg-white z-50" role="banner">
       <div className="mx-auto max-w-6xl px-5 py-4 flex items-center justify-between">
         {/* Logo + Name */}
         <Link to="/" className="flex items-center gap-3" aria-label="Live Life Better Therapy - Home">

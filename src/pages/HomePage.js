@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Header from "../components/Header";
 import Hero from "../components/Hero";
 import WhoIHelp from "../components/WhoIHelp";
 import LearnMore from "../components/LearnMore";
@@ -39,8 +40,9 @@ const HomePage = () => {
       >
         Skip to main content
       </a>
+      <Header active={active} onNav={onNav} />
       <main id="main-content" className="min-h-screen bg-white text-slate-900" style={{backgroundColor: '#ffffff'}}>
-        <Hero active={active} onNav={onNav} />
+        <Hero />
         <LearnMore />
         <WhoIHelp onNav={onNav} />
         <WhatSetsApart />

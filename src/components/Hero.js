@@ -1,12 +1,8 @@
 import FadeIn from "./FadeIn";
-import Header from "./Header";
 
-const Hero = ({ active, onNav }) => {
+const Hero = () => {
   return (
     <section id="home" className="relative" style={{background: 'linear-gradient(to bottom, #F3F0FF, #FDFCFF)'}}>
-      {/* Top nav */}
-      <Header active={active} onNav={onNav} />
-
       {/* Headline */}
       <div className="mx-auto max-w-6xl px-5 pt-12 pb-8 md:pt-16 md:pb-10">
         <FadeIn>

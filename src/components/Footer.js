@@ -1,26 +1,26 @@
 const Footer = () => {
   return (
-    <footer id="footer" className="text-slate-700" style={{backgroundColor: '#E6E6FA'}}>
+    <footer id="footer" className="text-slate-700" style={{backgroundColor: '#E6E6FA'}} role="contentinfo">
       <div className="mx-auto max-w-7xl px-5 py-12">
         <div className="grid lg:grid-cols-3 gap-10 items-center">
           {/* Left link list */}
-          <div className="text-xs space-y-1/5">
+          <nav className="text-xs space-y-1/5" aria-label="Footer navigation">
             <div className="font-semibold opacity-90">Info:</div>
             <ul className="mt-2 space-y-1 opacity-90">
-              <li><a href="#home" className="hover:underline">Home</a></li>
-              <li><a href="#bio" className="hover:underline">About</a></li>
-              <li><a href="#cta" className="hover:underline">Contact</a></li>
-              <li><a href="#cta" className="hover:underline">Fees</a></li>
-              <li><a href="#challenges" className="hover:underline">FAQs</a></li>
+              <li><a href="#home" className="hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 rounded">Home</a></li>
+              <li><a href="#bio" className="hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 rounded">About</a></li>
+              <li><a href="#cta" className="hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 rounded">Contact</a></li>
+              <li><a href="#cta" className="hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 rounded">Fees</a></li>
+              <li><a href="#challenges" className="hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 rounded">FAQs</a></li>
             </ul>
-          </div>
+          </nav>
 
           {/* Center brand + address */}
           <div className="text-center">
             <div className="inline-flex items-center gap-3">
               <img
                 src="/images/logo.png"
-                alt="Logo"
+                alt="Live Life Better Therapy logo"
                 className="h-24 w-24 md:h-28 md:w-28 rounded-full ring-1 ring-slate-300 object-cover"
               />
               <div className="font-nunito text-lg">
@@ -54,6 +54,20 @@ const Footer = () => {
             <div className="text-xs opacity-85 text-center lg:text-right">
               Live a healthier, happier and more connected life.
             </div>
+            {/* Psychology Today Verification Badge */}
+            <a
+              href="https://www.psychologytoday.com/profile/1642087"
+              className="mt-2"
+              aria-label="View Psychology Today profile"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/images/plogo.webp"
+                alt="Psychology Today Verified"
+                className="h-32 w-auto"
+              />
+            </a>
           </div>
         </div>
       </div>

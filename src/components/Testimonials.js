@@ -21,7 +21,7 @@ const Testimonials = () => {
     >
       <div className="absolute inset-0 bg-purple-600/55" style={{backgroundColor: 'rgba(147, 112, 219, 0.55)'}} />
 
-      <div className="relative mx-auto max-w-6xl px-5 py-16 md:py-20">
+      <div className="relative mx-auto max-w-6xl px-5 py-8 md:py-10">
         <h2 className="text-center text-3xl md:text-4xl font-nunito text-white mb-8">
           Client Testimonials
         </h2>

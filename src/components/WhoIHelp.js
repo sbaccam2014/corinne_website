@@ -28,7 +28,7 @@ const WhoIHelp = ({ onNav }) => {
   return (
     <section id="who" className="scroll-mt-24" style={{backgroundColor: '#F9F8FF'}}>
       <SectionDivider color="lavender" direction="down" variant={1} />
-      <div className="mx-auto max-w-6xl px-5 py-16 md:py-20">
+      <div className="mx-auto max-w-6xl px-5 py-8 md:py-10">
         <div className="grid lg:grid-cols-3 gap-14">
           {cards.map((card, i) => (
             <FadeIn key={card.title} delay={0.03 * i}>

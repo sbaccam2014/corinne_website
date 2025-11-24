@@ -6,7 +6,7 @@ const Bio = ({ onNav }) => {
   return (
     <section id="bio" className="relative scroll-mt-24" style={{backgroundColor: '#F9FBF7'}}>
       <SectionDivider color="sage" direction="down" variant={3} />
-      <div className="mx-auto max-w-6xl px-5 py-16 md:py-20">
+      <div className="mx-auto max-w-6xl px-5 py-8 md:py-10">
         <div className="grid md:grid-cols-2 gap-10 items-start">
           <FadeIn>
             <div>

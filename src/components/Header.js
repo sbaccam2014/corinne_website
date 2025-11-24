@@ -25,13 +25,13 @@ const Header = ({ active, onNav }) => {
   };
 
   return (
-    <div className="border-b border-gray-100 relative">
+    <header className="border-b border-gray-100 relative" role="banner">
       <div className="mx-auto max-w-6xl px-5 py-4 flex items-center justify-between">
         {/* Logo + Name */}
-        <Link to="/" className="flex items-center gap-3">
+        <Link to="/" className="flex items-center gap-3" aria-label="Live Life Better Therapy - Home">
           <img
             src="/images/logo.png"
-            alt="Logo"
+            alt="Live Life Better Therapy logo"
             className="h-24 w-24 md:h-28 md:w-28 rounded-full object-cover ring-2 ring-slate-200"
           />
           <div className="leading-tight">
@@ -44,7 +44,7 @@ const Header = ({ active, onNav }) => {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-6 text-sm">
+        <nav className="hidden md:flex items-center gap-6 text-sm" aria-label="Main navigation">
           {NAV.map((n) => (
             <a
               key={n.id}
@@ -61,9 +61,12 @@ const Header = ({ active, onNav }) => {
 
         {/* Mobile hamburger button */}
         <button
-          className="md:hidden p-2 rounded-md hover:bg-slate-100 transition"
+          className="md:hidden p-2 rounded-md hover:bg-slate-100 transition focus:outline-none focus:ring-2 focus:ring-offset-2"
+          style={{ '--tw-ring-color': '#9370DB' }}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          aria-label="Toggle menu"
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isMenuOpen}
+          aria-controls="mobile-menu"
         >
           {isMenuOpen ? (
             <svg className="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -79,8 +82,8 @@ const Header = ({ active, onNav }) => {
 
       {/* Mobile menu dropdown */}
       {isMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-100 shadow-lg z-50">
-          <nav className="flex flex-col py-2">
+        <div id="mobile-menu" className="md:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-100 shadow-lg z-50">
+          <nav className="flex flex-col py-2" aria-label="Mobile navigation">
             {NAV.map((n) => (
               <a
                 key={n.id}
@@ -96,7 +99,7 @@ const Header = ({ active, onNav }) => {
           </nav>
         </div>
       )}
-    </div>
+    </header>
   );
 };
 

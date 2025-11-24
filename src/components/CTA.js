@@ -6,7 +6,7 @@ const CTA = () => {
   return (
     <section id="cta" className="relative bg-white scroll-mt-24">
       <SectionDivider color="white" direction="down" variant={1} />
-      <div className="mx-auto max-w-6xl px-5 py-16 md:py-20">
+      <div className="mx-auto max-w-6xl px-5 py-8 md:py-10">
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <FadeIn>
             <div>

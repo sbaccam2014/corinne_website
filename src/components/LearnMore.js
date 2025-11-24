@@ -6,7 +6,7 @@ const LearnMore = () => {
   return (
     <section id="learn" className="bg-white scroll-mt-24">
       <SectionDivider color="white" direction="down" variant={2} />
-      <div className="mx-auto max-w-6xl px-5 py-16 md:py-20">
+      <div className="mx-auto max-w-6xl px-5 py-8 md:py-10">
         <FadeIn>
           <div className="text-center mb-12">
             <div className="flex justify-center mb-6">

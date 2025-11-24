@@ -8,7 +8,7 @@ const Hero = ({ active, onNav }) => {
       <Header active={active} onNav={onNav} />
 
       {/* Headline */}
-      <div className="mx-auto max-w-6xl px-5 pt-12 pb-16 md:pt-16 md:pb-20">
+      <div className="mx-auto max-w-6xl px-5 pt-12 pb-8 md:pt-16 md:pb-10">
         <FadeIn>
           <p className="text-sm tracking-[0.2em] font-semibold mb-4" style={{color: '#9CAF88'}}>
             THERAPY FOR CHILDREN, ADOLESCENTS, AND ADULTS

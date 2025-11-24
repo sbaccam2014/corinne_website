@@ -31,7 +31,7 @@ const KidsTeensPage = () => {
         </div>
       </section>
 
-      <section className="py-16 md:py-20">
+      <section className="py-8 md:py-10">
         <div className="mx-auto max-w-4xl px-5">
           <div className="prose prose-slate max-w-none">
             <h2 className="text-2xl font-semibold mb-4" style={{color: '#9CAF88'}}>

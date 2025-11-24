@@ -113,7 +113,7 @@ const ContactForm = () => {
   return (
     <section id="contact" className="scroll-mt-24" style={{backgroundColor: '#F9F8FF'}}>
       <SectionDivider color="lavender" direction="down" variant={2} />
-      <div className="mx-auto max-w-6xl px-5 py-16 md:py-20">
+      <div className="mx-auto max-w-6xl px-5 py-8 md:py-10">
         <FadeIn>
           <div className="text-center mb-12">
             <h2 className="font-nunito text-4xl md:text-5xl font-normal" style={{color: '#9370DB'}}>
@@ -192,9 +192,7 @@ const ContactForm = () => {
                 </div>
                 <ul className="text-xs text-slate-600 ml-7 space-y-1">
                   <li>• Private pay accepted</li>
-                  <li>• Out-of-network provider</li>
                   <li>• Superbills provided for reimbursement</li>
-                  <li>• HSA/FSA eligible</li>
                 </ul>
               </div>
 
@@ -221,7 +219,7 @@ const ContactForm = () => {
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-1">
-                    Name *
+                    Name <span aria-hidden="true">*</span><span className="sr-only">(required)</span>
                   </label>
                   <input
                     type="text"
@@ -229,14 +227,17 @@ const ContactForm = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
+                    aria-required="true"
+                    aria-invalid={errors.name ? "true" : "false"}
+                    aria-describedby={errors.name ? "name-error" : undefined}
                     className={`w-full px-4 py-2.5 rounded-md border focus:outline-none focus:ring-2 focus:border-transparent text-sm ${errors.name ? 'border-red-400' : 'border-slate-300'}`}
                   />
-                  {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name}</p>}
+                  {errors.name && <p id="name-error" role="alert" className="text-red-500 text-xs mt-1">{errors.name}</p>}
                 </div>
 
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-1">
-                    Email *
+                    Email <span aria-hidden="true">*</span><span className="sr-only">(required)</span>
                   </label>
                   <input
                     type="email"
@@ -244,14 +245,17 @@ const ContactForm = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
+                    aria-required="true"
+                    aria-invalid={errors.email ? "true" : "false"}
+                    aria-describedby={errors.email ? "email-error" : undefined}
                     className={`w-full px-4 py-2.5 rounded-md border focus:outline-none focus:ring-2 focus:border-transparent text-sm ${errors.email ? 'border-red-400' : 'border-slate-300'}`}
                   />
-                  {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
+                  {errors.email && <p id="email-error" role="alert" className="text-red-500 text-xs mt-1">{errors.email}</p>}
                 </div>
 
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-slate-700 mb-1">
-                    Phone Number
+                    Phone Number <span className="sr-only">(optional)</span>
                   </label>
                   <input
                     type="tel"
@@ -260,14 +264,17 @@ const ContactForm = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="(888)-888-8888"
+                    aria-invalid={errors.phone ? "true" : "false"}
+                    aria-describedby={errors.phone ? "phone-error" : "phone-hint"}
                     className={`w-full px-4 py-2.5 rounded-md border focus:outline-none focus:ring-2 focus:border-transparent text-sm ${errors.phone ? 'border-red-400' : 'border-slate-300'}`}
                   />
-                  {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
+                  <p id="phone-hint" className="sr-only">Format: 10-digit US phone number</p>
+                  {errors.phone && <p id="phone-error" role="alert" className="text-red-500 text-xs mt-1">{errors.phone}</p>}
                 </div>
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-1">
-                    How can I help you? *
+                    How can I help you? <span aria-hidden="true">*</span><span className="sr-only">(required)</span>
                   </label>
                   <textarea
                     id="message"
@@ -275,9 +282,12 @@ const ContactForm = () => {
                     value={formData.message}
                     onChange={handleChange}
                     rows={5}
+                    aria-required="true"
+                    aria-invalid={errors.message ? "true" : "false"}
+                    aria-describedby={errors.message ? "message-error" : undefined}
                     className={`w-full px-4 py-2.5 rounded-md border focus:outline-none focus:ring-2 focus:border-transparent text-sm resize-none ${errors.message ? 'border-red-400' : 'border-slate-300'}`}
                   />
-                  {errors.message && <p className="text-red-500 text-xs mt-1">{errors.message}</p>}
+                  {errors.message && <p id="message-error" role="alert" className="text-red-500 text-xs mt-1">{errors.message}</p>}
                 </div>
 
                 <button
@@ -289,17 +299,19 @@ const ContactForm = () => {
                   {status === "submitting" ? "SENDING..." : "SEND MESSAGE"}
                 </button>
 
-                {status === "success" && (
-                  <div className="p-3 rounded-md bg-green-50 text-green-700 text-sm text-center">
-                    Thank you! Your message has been sent. I'll get back to you soon.
-                  </div>
-                )}
+                <div aria-live="polite" aria-atomic="true">
+                  {status === "success" && (
+                    <div role="status" className="p-3 rounded-md bg-green-50 text-green-700 text-sm text-center">
+                      Thank you! Your message has been sent. I'll get back to you soon.
+                    </div>
+                  )}
 
-                {status === "error" && (
-                  <div className="p-3 rounded-md bg-red-50 text-red-700 text-sm text-center">
-                    Something went wrong. Please try again or email me directly.
-                  </div>
-                )}
+                  {status === "error" && (
+                    <div role="alert" className="p-3 rounded-md bg-red-50 text-red-700 text-sm text-center">
+                      Something went wrong. Please try again or email me directly.
+                    </div>
+                  )}
+                </div>
 
                 <p className="text-xs text-slate-500 text-center">
                   By submitting this form, you agree to be contacted about your inquiry.

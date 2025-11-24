@@ -47,7 +47,7 @@ const FAQ = () => {
   return (
     <section id="faq" className="bg-white scroll-mt-24">
       <SectionDivider color="white" direction="down" variant={3} />
-      <div className="mx-auto max-w-4xl px-5 py-16 md:py-20">
+      <div className="mx-auto max-w-4xl px-5 py-8 md:py-10">
         <FadeIn>
           <div className="text-center mb-12">
             <h2 className="font-nunito text-3xl md:text-4xl font-normal" style={{color: '#9370DB'}}>

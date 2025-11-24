@@ -30,18 +30,28 @@ const HomePage = () => {
   };
 
   return (
-    <main className="min-h-screen bg-white text-slate-900" style={{backgroundColor: '#ffffff'}}>
-      <Hero active={active} onNav={onNav} />
-      <LearnMore />
-      <WhoIHelp onNav={onNav} />
-      <WhatSetsApart />
-      <Bio onNav={onNav} />
-      <Testimonials />
-      <CTA />
-      <FAQ />
-      <ContactForm />
-      <Footer />
-    </main>
+    <>
+      {/* Skip to main content link for keyboard users */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-white focus:text-slate-900 focus:rounded-md focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2"
+        style={{ focusRingColor: '#9370DB' }}
+      >
+        Skip to main content
+      </a>
+      <main id="main-content" className="min-h-screen bg-white text-slate-900" style={{backgroundColor: '#ffffff'}}>
+        <Hero active={active} onNav={onNav} />
+        <LearnMore />
+        <WhoIHelp onNav={onNav} />
+        <WhatSetsApart />
+        <Bio onNav={onNav} />
+        <Testimonials />
+        <CTA />
+        <FAQ />
+        <ContactForm />
+        <Footer />
+      </main>
+    </>
   );
 };
 

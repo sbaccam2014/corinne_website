@@ -27,7 +27,7 @@ const WhatSetsApart = () => {
       />
       <div className="absolute inset-0 -z-10 mix-blend-multiply" style={{backgroundColor: 'rgba(230, 230, 250, 0.55)'}} />
 
-      <div className="mx-auto max-w-6xl px-5 py-16 md:py-20">
+      <div className="mx-auto max-w-6xl px-5 py-8 md:py-10">
         <div className="grid">
           <div className="md:col-start-2" />
           {/* Floating white card */}

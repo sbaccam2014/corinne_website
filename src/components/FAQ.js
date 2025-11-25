@@ -19,8 +19,8 @@ const FAQ = () => {
       answer: "Yes! I offer both in-person sessions at my Hopkinton office and secure telehealth sessions for your convenience and flexibility."
     },
     {
-      question: "Do you accept insurance?",
-      answer: "I am an out-of-network provider and accept private pay. I provide superbills that you can submit to your insurance for potential reimbursement. HSA and FSA accounts are also accepted."
+      question: "What are your fees and do you accept insurance?",
+      answer: "Individual sessions are $185. I accept Aetna, BlueCross and BlueShield, Harvard Pilgrim, and Quest Behavioral Health. I also work with out-of-network clients and can provide superbills for reimbursement."
     },
     {
       question: "How long are sessions and how often do we meet?",

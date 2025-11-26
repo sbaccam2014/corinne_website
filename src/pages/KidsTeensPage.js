@@ -97,13 +97,13 @@ const KidsTeensPage = () => {
               <p className="text-sm text-slate-600 mb-6">
                 I offer a free 15-minute consultation to discuss your child's needs and how I can help.
               </p>
-              <Link
-                to="/#contact"
+              <a
+                href="/#contact"
                 className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-white rounded-md transition hover:opacity-90"
                 style={{backgroundColor: '#9CAF88'}}
               >
                 Get In Touch
-              </Link>
+              </a>
             </div>
           </div>
         </div>

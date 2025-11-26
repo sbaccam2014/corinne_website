@@ -105,13 +105,13 @@ const ParentsPage = () => {
               <p className="text-sm text-slate-600 mb-6">
                 Supporting your child starts with understanding your family. Schedule a free consultation to discuss how we can work together.
               </p>
-              <Link
-                to="/#contact"
+              <a
+                href="/#contact"
                 className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-white rounded-md transition hover:opacity-90"
                 style={{backgroundColor: '#9CAF88'}}
               >
                 Get In Touch
-              </Link>
+              </a>
             </div>
           </div>
         </div>

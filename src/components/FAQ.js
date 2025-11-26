@@ -101,7 +101,7 @@ const FAQ = () => {
               Have more questions?
             </p>
             <a
-              href="#contact"
+              href="/#contact"
               className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white rounded-md transition hover:opacity-90"
               style={{backgroundColor: '#9CAF88'}}
             >

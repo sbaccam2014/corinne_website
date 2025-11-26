@@ -7,11 +7,11 @@ const Footer = () => {
           <nav className="text-xs space-y-1/5" aria-label="Footer navigation">
             <div className="font-semibold opacity-90">Info:</div>
             <ul className="mt-2 space-y-1 opacity-90">
-              <li><a href="#home" className="hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 rounded">Home</a></li>
-              <li><a href="#bio" className="hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 rounded">About</a></li>
-              <li><a href="#cta" className="hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 rounded">Contact</a></li>
-              <li><a href="#cta" className="hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 rounded">Fees</a></li>
-              <li><a href="#challenges" className="hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 rounded">FAQs</a></li>
+              <li><a href="/#home" className="hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 rounded">Home</a></li>
+              <li><a href="/#bio" className="hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 rounded">About</a></li>
+              <li><a href="/#contact" className="hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 rounded">Contact</a></li>
+              <li><a href="/#contact" className="hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 rounded">Fees</a></li>
+              <li><a href="/#faq" className="hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 rounded">FAQs</a></li>
             </ul>
           </nav>
 

@@ -4,7 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 const NAV = [
   { id: "who", label: "Who I Help" },
   { id: "learn", label: "Learn More" },
-  { id: "portal", label: "Client Portal" },
+  { id: "portal", label: "Client Portal", external: true, url: "https://care.headway.co/providers/corinne-spangler-baccam?utm_source=pem&utm_medium=direct_link&utm_campaign=167991" },
 ];
 
 const Header = ({ active, onNav }) => {
@@ -13,7 +13,13 @@ const Header = ({ active, onNav }) => {
   const navigate = useNavigate();
   const isHomePage = location.pathname === "/";
 
-  const handleNavClick = (e, id) => {
+  const handleNavClick = (e, id, isExternal, url) => {
+    if (isExternal) {
+      // Let the default link behavior happen for external links
+      setIsMenuOpen(false);
+      return;
+    }
+
     e.preventDefault();
     setIsMenuOpen(false);
 
@@ -48,11 +54,12 @@ const Header = ({ active, onNav }) => {
           {NAV.map((n) => (
             <a
               key={n.id}
-              href={`/#${n.id}`}
-              onClick={(e) => handleNavClick(e, n.id)}
+              href={n.external ? n.url : `/#${n.id}`}
+              onClick={(e) => handleNavClick(e, n.id, n.external, n.url)}
               className={`text-slate-600 hover:text-slate-900 transition font-medium ${
                 active === n.id ? "text-slate-900" : ""
               }`}
+              {...(n.external && { target: "_blank", rel: "noopener noreferrer" })}
             >
               {n.label}
             </a>
@@ -87,11 +94,12 @@ const Header = ({ active, onNav }) => {
             {NAV.map((n) => (
               <a
                 key={n.id}
-                href={`/#${n.id}`}
-                onClick={(e) => handleNavClick(e, n.id)}
+                href={n.external ? n.url : `/#${n.id}`}
+                onClick={(e) => handleNavClick(e, n.id, n.external, n.url)}
                 className={`px-5 py-3 text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition font-medium ${
                   active === n.id ? "text-slate-900 bg-slate-50" : ""
                 }`}
+                {...(n.external && { target: "_blank", rel: "noopener noreferrer" })}
               >
                 {n.label}
               </a>

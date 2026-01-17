@@ -210,7 +210,7 @@ export const getSpacing = (value) => spacing[value];
 export const getFontSize = (size) => typography.fontSize[size];
 
 // Export default for easier imports
-export default {
+const tokens = {
   colors,
   typography,
   spacing,
@@ -223,3 +223,5 @@ export default {
   getSpacing,
   getFontSize,
 };
+
+export default tokens;

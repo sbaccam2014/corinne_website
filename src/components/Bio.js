@@ -52,7 +52,7 @@ const Bio = ({ onNav }) => {
 
               {/* portrait (sits above) */}
               <img
-                src="/images/headshot.jpeg"
+                src="/images/headshot.jpg"
                 alt="Corinne Spangler-Baccam"
                 className="relative z-10 w-full max-w-md rounded-xl object-cover aspect-[4/5] h-auto"
               />

@@ -18,7 +18,7 @@ const WhatSetsApart = () => {
       <div
         className="absolute inset-0 -z-10"
         style={{
-          backgroundImage: "url('/images/office-wide.webp')",
+          backgroundImage: "url('/images/couch-sitting.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           filter: "saturate(0.8)",
